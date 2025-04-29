@@ -125,6 +125,7 @@ return {
             clangd = {},
             bashls = {},
             marksman = {},
+            pylsp = {},
             -- add more servers here …
         }
 
@@ -132,7 +133,7 @@ return {
         -- Mason install helpers
         --------------------------------------------------------------------------
         local ensure = vim.tbl_keys(servers)
-        vim.list_extend(ensure, { "stylua" }) -- formatter for Lua
+        vim.list_extend(ensure, { "stylua", "isort", "black" }) -- formatter for Lua
         require("mason-tool-installer").setup({ ensure_installed = ensure })
 
         --------------------------------------------------------------------------
