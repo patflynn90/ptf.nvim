@@ -123,6 +123,8 @@ return {
         },
       },
       clangd = {},
+      bashls = {},
+      marksman = {},
       -- add more servers here …
     }
 
