@@ -18,6 +18,7 @@ return {
 		custom_highlights = function(colors)
 			return {
 				["@markup.list.checked.markdown"] = { fg = colors.sapphire },
+				Keyword = { style = { "italic" } },
 				["@keyword.function"] = { style = { "italic" } },
 			}
 		end,
