@@ -133,7 +133,11 @@ return {
         -- Mason install helpers
         --------------------------------------------------------------------------
         local ensure = vim.tbl_keys(servers)
-        vim.list_extend(ensure, { "stylua", "isort", "black" }) -- formatter for Lua
+        vim.list_extend(ensure, {
+            "stylua", -- Lua formatter
+            "isort", -- Python imports sorter
+            "black", -- Python formatter
+        })
         require("mason-tool-installer").setup({ ensure_installed = ensure })
 
         --------------------------------------------------------------------------
