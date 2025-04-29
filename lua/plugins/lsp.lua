@@ -31,15 +31,15 @@ return {
           vim.keymap.set(mode, keys, fn, { buffer = event.buf, desc = "LSP: " .. desc })
         end
 
-        map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
-        map("gra", vim.lsp.buf.code_action, "[G]oto Code [A]ction", { "n", "x" })
-        map("grr", require("fzf-lua").lsp_references, "[G]oto [R]eferences")
-        map("gri", require("fzf-lua").lsp_implementations, "[G]oto [I]mplementation")
-        map("grd", require("fzf-lua").lsp_definitions, "[G]oto [D]efinition")
-        map("grD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-        map("gO",  require("fzf-lua").lsp_document_symbols, "Open Document Symbols")
-        map("gW",  require("fzf-lua").lsp_live_workspace_symbols, "Open Workspace Symbols")
-        map("grt", require("fzf-lua").lsp_typedefs, "[G]oto [T]ype Definition")
+        map("<leader>cn", vim.lsp.buf.rename, "Rename term")
+        map("<leader>ca", vim.lsp.buf.code_action, "Code actions", { "n", "x" })
+        map("<leader>cr", require("fzf-lua").lsp_references, "References")
+        map("<leader>ci", require("fzf-lua").lsp_implementations, "Implementation")
+        map("<leader>cd", require("fzf-lua").lsp_definitions, "Definition")
+        map("<leader>cD", vim.lsp.buf.declaration, "Declaration")
+        map("<leader>cO",  require("fzf-lua").lsp_document_symbols, "Open Document Symbols")
+        map("<leader>cW",  require("fzf-lua").lsp_live_workspace_symbols, "Open Workspace Symbols")
+        map("<leader>ct", require("fzf-lua").lsp_typedefs, "Type Definition")
 
         -- Compat helper for 0.10 vs 0.11
         local function supports(client, method, bufnr)
