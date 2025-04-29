@@ -6,8 +6,14 @@ return {
 			dark = "mocha",
 		},
 		styles = {
-			comments = { "italic" },
 			conditionals = { "italic" },
+		},
+		highlight_overrides = {
+			latte = function(latte)
+				return {
+					["@comment"] = { fg = latte.surface1, style = { "italic" } },
+				}
+			end,
 		},
 		custom_highlights = function(colors)
 			return {
