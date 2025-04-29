@@ -15,11 +15,11 @@ return {
             desc = "[F]ind [f]iles in project directory",
         },
         {
-            "<leader>fr",
+            "<leader>fp",
             function()
                 require("fzf-lua").live_grep()
             end,
-            desc = "[F]ind in project directory via [r]ipgrep",
+            desc = "[F]ind in project directory via ripgre[p]",
         },
         {
             "<leader>fc",
