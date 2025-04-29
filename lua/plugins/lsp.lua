@@ -122,6 +122,7 @@ return {
           Lua = { completion = { callSnippet = "Replace" } },
         },
       },
+      clangd = {},
       -- add more servers here …
     }
 
