@@ -84,5 +84,12 @@ return {
 			end,
 			desc = "[/] Live grep the current buffer",
 		},
+		{
+			"<leader>fB",
+			function()
+				require("fzf-lua").builtin()
+			end,
+			desc = "[F]ind fzf-lua [B]uiltins",
+		},
 	},
 }
