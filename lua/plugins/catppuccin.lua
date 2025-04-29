@@ -20,6 +20,7 @@ return {
 				["@markup.list.checked.markdown"] = { fg = colors.sapphire },
 				Keyword = { style = { "italic" } },
 				["@keyword.function"] = { style = { "italic" } },
+				["@keyword.return"] = { style = { "italic" } },
 			}
 		end,
 		integrations = {
