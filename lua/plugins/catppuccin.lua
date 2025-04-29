@@ -35,6 +35,7 @@ return {
             which_key = true,
             fzf = true,
             blink_cmp = true,
+            mason = true,
         },
         transparent_background = true,
         kitty = true,
