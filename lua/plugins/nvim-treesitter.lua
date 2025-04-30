@@ -15,6 +15,7 @@ return {
                 "css",
                 "markdown",
                 "python",
+                "swift",
             },
             sync_install = false,
             highlight = { enable = true },

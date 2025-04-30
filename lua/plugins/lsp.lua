@@ -115,6 +115,7 @@ return {
         --------------------------------------------------------------------------
         local original_capabilities = vim.lsp.protocol.make_client_capabilities()
         local capabilities = require("blink.cmp").get_lsp_capabilities(original_capabilities)
+        local util = require("lspconfig.util")
 
         local servers = {
             lua_ls = {
@@ -144,6 +145,7 @@ return {
             "stylua", -- Lua formatter
             "isort", -- Python imports sorter
             "black", -- Python formatter
+            "swiftlint", -- Swift linter
         })
         require("mason-tool-installer").setup({ ensure_installed = ensure })
 
@@ -160,6 +162,13 @@ return {
                     require("lspconfig")[name].setup(opts)
                 end,
             },
+        })
+
+        require("lspconfig").sourcekit.setup({
+            cmd = { "sourcekit-lsp" },
+            filetypes = { "swift", "objective-c", "objective-cpp" },
+            root_dir = util.root_pattern("Package.swift", ".git"),
+            capabilities = capabilities,
         })
     end,
 }
