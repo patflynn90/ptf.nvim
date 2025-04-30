@@ -56,6 +56,7 @@ return {
                     background = true,
                 },
             },
+            notify = true,
         },
         transparent_background = true,
         kitty = true,
