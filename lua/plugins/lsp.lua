@@ -134,6 +134,7 @@ return {
             bashls = {},
             marksman = {},
             pylsp = {},
+            zls = {},
             -- add more servers here …
         }
 

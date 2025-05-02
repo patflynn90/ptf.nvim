@@ -16,6 +16,7 @@ return {
                 "markdown",
                 "python",
                 "swift",
+                "zig",
             },
             sync_install = false,
             highlight = { enable = true },
