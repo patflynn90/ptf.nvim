@@ -135,6 +135,7 @@ return {
             marksman = {},
             pylsp = {},
             zls = {},
+            v_analyzer = {},
             -- add more servers here …
         }
 

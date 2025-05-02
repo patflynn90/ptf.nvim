@@ -17,6 +17,7 @@ return {
                 "python",
                 "swift",
                 "zig",
+                "v",
             },
             sync_install = false,
             highlight = { enable = true },
